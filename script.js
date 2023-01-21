@@ -1,12 +1,13 @@
+// Terakhir ditambahkan
 let playerState = 'idle';
 const dropdown = document.getElementById('animations');
 dropdown.addEventListener('change', function(e){
     playerState = e.target.value;
 });
 
+// Panggil elemen canvas pada index.html
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
-
 const CANVAS_WIDTH = canvas.width = 600;
 const CANVAS_HEIGHT = canvas.height = 600;
 
@@ -17,7 +18,7 @@ const spriteWidth = 575;
 const spriteHeight = 523;
 
 let gameFrame = 0;
-const staggerFrames = 5;
+const staggerFrames = 3;
 const spriteAnimations = [];
 const animationStates = [
     {
@@ -61,6 +62,7 @@ const animationStates = [
         frames: 4,
     }
 ];
+
 animationStates.forEach((state, index) => {
     let frames = {
         loc: [],
